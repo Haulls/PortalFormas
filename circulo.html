@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circulo</title>
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+    <div class="formas">
+        <nav>
+            <ul>
+                <li><a href="circulo.html">Circulo</a> </li>
+                <li><a href="retangulo.html">Retângulo</a></li>
+                    <li><a href="triangulo.html">Triângulo</a></li>
+                                    <li><a href="quadrado.html">Quadrado</a></li>
+                                        <li><a href="Trapezoideirregular.html">Trapeziode Irregular</a></li>
+                                            <li><a href="poligono.html">Poligono Regular</a></li>
+                           
+</ul>
+</nav>
+</div>
+    <div class="container">
+        <div class="titulo">
+            <h2>Calculadora de área do circulo</h2>
+        </div>
+     <p class="formula">fórmula: <code> (A = π r²) </code></p>
+        
+
+        <form class="form">
+            <div class="col-1">
+                <input type="number" id="raio" step="any" placeholder="Digite o raio"><br><br>
+                <input type="number" id="base" name="base" required>
+            </div>
+                <input type="submit" class="btnCalc" id="btnCalc" value="Calcular">
+            <div>
+            </div>
+
+        </form>
+        <div class="result">
+            <h3 id="resultado"></h3>
+        </div>
+    </div>
+
+ 
+    <script>
+       function calcularArea() {
+            var raio = parseFloat(document.getElementById("raio").value);
+            var area = Math.PI * raio * raio;
+            document.getElementById("resultado").innerHTML = "A área do círculo é: " + area.toFixed(2);
+        }
+    </script>
+
+
+
+
+<div class="container">
+<div class="titulo">
+    <h2>Coroa do Círculo </h2>
+</div>
+<p class="formula">fórmula: A = (π * R²) – (π * r²) </code></p>
+
+
+<form class="form">
+    <div class="col-1">
+        <label for="Rmaior">RaioM: </label>
+        <input type="number" id="RaioM" name="RaioM" required>
+    </div>
+    <div class="col-1">
+        <label for="Rmenor">Raiom: </label>
+        <input type="number" name="Raiom" id="Raiom" required />
+    </div>
+    <div>
+        <input type="submit" class="btnCalc" id="btnCalc" value="Calcular">
+    </div>
+</form>
+<div class="result">
+    <h3 id="CoroaC"></h3>
+</div>
+</div>
+
+
+<script>
+    document.querySelector("#btnCalc").addeventlistener("click", function (event){
+
+        event.preventDefaukt();
+        let RaioM = document.querySelector("RaioM").value;
+        let Raiom = document.querySelector("Raiom").value;
+        const pi = Math.PI;
+        let resultM = Math.pow(RaioM, 2)
+        let resultm = Math.pow(Raiom, 2)
+
+        let CoroaC = c = (PI * RaioM) - (PI * Raiom);
+        
+
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+</html>
